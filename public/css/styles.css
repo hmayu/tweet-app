@@ -1,0 +1,52 @@
+body {
+    background-color: #f4f7f8;
+}
+
+a {
+    text-decoration: none;
+}
+
+.my-navbar {
+    align-items: center;
+    background: #333;
+    height: 6rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2%;
+    margin-bottom: 3rem;
+}
+
+.my-navbar-title {
+    font-size: 30px;
+}
+
+.my-navbar-title,
+.my-navbar-item,
+.item {
+    color: #8c8c8c;
+}
+
+.my-navbar-title:hover,
+.item:hover {
+    color: #ffffff;
+}
+
+.container .tweets {
+    margin: 2em 2em;
+    background: #dcefff;
+}
+
+.container .tweets .tweets-name {
+    font-size: 1.2em;
+    background: #5fb3f5;
+    padding: 4px;
+    text-align: center;
+    color: #FFF;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+
+.container  .tweets-text {
+    padding: 15px 20px;
+    margin: 0;
+}
