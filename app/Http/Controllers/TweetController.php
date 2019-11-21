@@ -8,6 +8,6 @@ class TweetController extends Controller
 {
     public function index()
     {
-        return "hello world";
+        return view('tweets/index');
     }
 }
