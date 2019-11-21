@@ -31,22 +31,28 @@ a {
     color: #ffffff;
 }
 
-.container .tweets {
-    margin: 2em 2em;
+.container .tweets{
+    margin: 3em 15em;
     background: #dcefff;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 2px 4px gray;
 }
 
-.container .tweets .tweets-name {
+.container .tweets .tweet-name {
     font-size: 1.2em;
     background: #5fb3f5;
-    padding: 4px;
-    text-align: center;
+    text-align: left;
     color: #FFF;
     font-weight: bold;
     letter-spacing: 0.05em;
+    padding: 10px;
 }
 
-.container  .tweets-text {
-    padding: 15px 20px;
+.container .tweet-text {
+    padding: 15px;
+}
+
+.container .tweets p {
     margin: 0;
 }
