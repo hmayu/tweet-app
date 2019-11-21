@@ -33,24 +33,26 @@ a {
 
 .container .tweets{
     margin: 3em 15em;
-    background: #dcefff;
+    background: #fff;
     display: flex;
     flex-direction: column;
     box-shadow: 2px 2px 4px gray;
+    border-radius:5px;
 }
 
 .container .tweets .tweet-name {
     font-size: 1.2em;
-    background: #5fb3f5;
+    background: #c4d1e4;
     text-align: left;
-    color: #FFF;
-    font-weight: bold;
+    color: #5a5b5c;
     letter-spacing: 0.05em;
     padding: 10px;
+    border-radius:5px 5px 0 0;
 }
 
 .container .tweet-text {
     padding: 15px;
+    color: #8c8c8c;
 }
 
 .container .tweets p {
