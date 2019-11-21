@@ -22,26 +22,14 @@
 
     <main>
         <div class="container">
-            {{-- @foreach ($posts as $post) --}}
+            @foreach ($tweets as $tweet)
                 <div class="tweets">
-                    <a href="#" class="tweet-name">投稿者</a>
+                    <a href="#" class="tweet-name">{{ $tweet->user()->value('name') }}</a>
                     <a href="#" class="tweet-text">
-                        <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                        <p>{{ $tweet->text }}</p>
                     </a>
                 </div>
-                <div class="tweets">
-                    <a href="#" class="tweet-name">投稿者</a>
-                    <a href="#" class="tweet-text">
-                        <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                    </a>
-                </div>
-                <div class="tweets">
-                    <a href="#" class="tweet-name">投稿者</a>
-                    <a href="#" class="tweet-text">
-                        <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                    </a>
-                </div>
-            {{-- @endforeach --}}
+            @endforeach
         </div>
     </main>
 </body>
