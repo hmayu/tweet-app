@@ -13,9 +13,9 @@ class TweetsTableSeeder extends Seeder
      */
     public function run()
     {
-        foreach (range(5,7) as $num) {
+        for ($i = 0; $i < 10; $i++) {
             DB::table('tweets')->insert([
-                'user_id' => "{$num}",
+                'user_id' => rand(1,5),
                 'text' => "テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト",
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
