@@ -13,3 +13,4 @@
 
 Route::get('/', 'TweetController@index')->name('tweets.index');
 Route::get('/tweets', 'TweetController@index')->name('tweets.index');
+Route::get('/tweets/create', 'TweetController@create')->name('tweets.create');
