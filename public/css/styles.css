@@ -22,7 +22,9 @@ a {
 
 .my-navbar-title,
 .my-navbar-item,
-.item {
+.my-navbar-item .item,
+.create-post h1
+ {
     color: #8c8c8c;
 }
 
@@ -40,7 +42,8 @@ a {
     border-radius:5px;
 }
 
-.container .tweets .tweet-name {
+.container .tweets .tweet-name
+{
     font-size: 1.2em;
     background: #c4d1e4;
     text-align: left;
@@ -57,4 +60,60 @@ a {
 
 .container .tweets p {
     margin: 0;
+}
+
+.create-post {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: auto;
+}
+.create-post .post-text {
+    /* font: 15px/24px sans-serif; */
+    /* box-sizing: border-box; */
+    width: 100%;
+    height: 15em;
+    padding: 0.3em;
+    transition: 0.3s;
+    letter-spacing: 1px;
+    color: #aaaaaa;
+    border: 1px solid #ffffff;
+    box-shadow: 1px 1px 2px 0 #707070 inset;
+    border-radius: 4px;
+}
+.create-post .post-text:focus {
+    outline: none;
+    box-shadow: inset 1px 1px 2px 0 #c9c9c9;
+}
+
+.create-post .btn {
+    display: flex;
+    justify-content:flex-end;
+}
+
+.btn-item {
+    position: relative;
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: #FFF;
+    background: rgb(90, 196, 245);
+    border: solid 1px #4b9bc0;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+    text-shadow: 0 1px 0 rgba(0,0,0,0.2);
+    margin: 5px;
+}
+  
+.btn-item:active {
+    border: solid 1px #03A9F4;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+.create-post h1 {
+    font-weight: normal;
+    font-size: 1.5em;
+    margin: 0 0 5px 0;
 }
