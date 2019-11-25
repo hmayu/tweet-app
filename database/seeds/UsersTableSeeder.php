@@ -13,28 +13,21 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert([
-            [
-                'name' => "櫻井",
-                'email' => "sakurai@email.co.jp",
-                'password' => bcrypt('test12345'),
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now(),
-            ],
-            [
-                'name' => "相葉",
-                'email' => "aiba@email.co.jp",
-                'password' => bcrypt('test6789'),
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now(),
-            ],
-            [
-                'name' => "二宮",
-                'email' => "ninomiya@email.co.jp",
-                'password' => bcrypt('testtest1'),
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now(),
-            ],
-        ]);
+        $users = [
+            ['name' => '松本', 'email' => "matumoto@email.co.jp"],
+            ['name' => '大野', 'email' => "oono@email.co.jp"],
+            ['name' => '櫻井', 'email' => "sakurai@email.co.jp"],
+            ['name' => '相葉', 'email' => "aiba@email.co.jp"],
+            ['name' => '二宮', 'email' => "ninomiya@email.co.jp"],
+        ];
+            
+        foreach($users as $user){
+            DB::table('users')->insert([
+            ['name' => $user['name'],
+            'email' => $user['email'],
+            'password' => bcrypt('test12345'),
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),],]);
+        }
     }
 }
