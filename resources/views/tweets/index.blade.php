@@ -22,6 +22,7 @@
 
     <main>
         <div class="container">
+            <a href="{{ route('tweets.create') }}" class="btn-item">新規作成</a>
             @foreach ($tweets as $tweet)
                 <div class="tweets">
                     <a href="#" class="tweet-name">{{ $tweet->user()->value('name') }}</a>
