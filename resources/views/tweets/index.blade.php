@@ -11,8 +11,11 @@
 <body>
     <header>
         <nav class="my-navbar">
-            <a class="my-navbar-title" href="#">Tweet</a>
             <div class="my-navbar-item">
+                <a class="title" href="#">Tweet</a>
+                <a href="{{ route('tweets.create') }}" class="create-item">新規投稿</a>
+            </div>
+            <div class="my-navbar-account">
                 <a class="item" href="#">サインイン</a>
                 |
                 <a class="item" href="#">サインアップ</a>
@@ -22,7 +25,8 @@
 
     <main>
         <div class="container">
-            <a href="{{ route('tweets.create') }}" class="btn-item">新規作成</a>
+            {{-- <div class="container-btn">
+            </div> --}}
             @foreach ($tweets as $tweet)
                 <div class="tweets">
                     <a href="#" class="tweet-name">{{ $tweet->user()->value('name') }}</a>
