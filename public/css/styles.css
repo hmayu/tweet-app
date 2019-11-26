@@ -8,6 +8,7 @@ a
     text-decoration: none;
 }
 
+/* インデックスページの全体設定 */
 .my-navbar 
 {
     align-items: center;
@@ -75,14 +76,19 @@ a
     margin: 0;
 }
 
-.create-post {
+/* 新規投稿・会員登録ページの全体設定 */
+.create-post
+{
     position: relative;
     display: flex;
     flex-direction: column;
     width: 60%;
     margin: auto;
 }
-.create-post .post-text {
+
+/* テキストエリアボックス */
+.create-post .post-text
+{
     font: 15px/24px sans-serif;
     box-sizing: border-box;
     width: 100%;
@@ -95,16 +101,21 @@ a
     box-shadow: 1px 1px 2px 0 #707070 inset;
     border-radius: 4px;
 }
+
+/* テキストエリアボックス：フォーカス時 */
 .create-post .post-text:focus {
     outline: none;
     box-shadow: inset 1px 1px 2px 0 #c9c9c9;
 }
 
-.create-post .btn {
+/* ボタンの配置設定 */
+.create-post .btn,
+.container .btn {
     display: flex;
     justify-content:flex-end;
 }
 
+/* ボタンデザイン */
 .btn-item {
     position: relative;
     display: inline-block;
@@ -118,13 +129,15 @@ a
     text-shadow: 0 1px 0 rgba(0,0,0,0.2);
     margin: 5px;
 }
-  
+
+/* ボタン押下時 */
 .btn-item:active {
     border: solid 1px #03A9F4;
     box-shadow: none;
     text-shadow: none;
 }
 
+/* h1フォント設定 */
 .create-post h1 {
     font-weight: normal;
     font-size: 1.5em;

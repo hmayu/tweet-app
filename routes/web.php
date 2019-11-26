@@ -14,3 +14,6 @@
 Route::get('/', 'TweetController@index')->name('tweets.index');
 // Route::get('/tweets/create', 'TweetController@create')->name('tweets.create');
 Route::resource('tweets', 'TweetController', ['only' => ['index', 'create', 'store']]);
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
