@@ -29,5 +29,6 @@ class HomeController extends Controller
         return view('tweets.index',[
             'tweets' => $tweets,
         ]);
+        
     }
 }

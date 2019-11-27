@@ -29,6 +29,10 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                @guest
+                @else
+                    <label for="name">{{ Auth::user()->name }}</label>
+                @endguest
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
@@ -50,13 +54,13 @@
                             </li>
                         @else
                             <li class="nav-item">
-                                <label for="name">{{ Auth::user()->name }}さん</label>
+                                <a href="{{ route('tweets.create') }}" class="create-item">新規投稿</a>
                             </li>
                             <li class="nav-item">
-                                    <form class="nav-link" id="logout-form" action="{{ route('logout') }}" method="POST">
-                                        @csrf
-                                        <button>サインアウト</button>
-                                    </form>
+                                <form class="nav-link" id="logout-form" action="{{ route('logout') }}" method="POST">
+                                    @csrf
+                                    <button>サインアウト</button>
+                                </form>
                             </li>
                         @endguest
                     </ul>
