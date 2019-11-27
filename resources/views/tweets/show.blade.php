@@ -6,8 +6,7 @@
             <div class="tweet-head">
                 <p class="tweet-name">{{ $tweet->user()->value('name') }}</p>
                 <div class="head-btn">
-                    <button>コメントを書く</button>
-                    @if (Auth::check())
+                    @if (Auth::id() == $tweet->user_id )
                     <button>編集</button>
                     <button>削除</button>
                     @endif
@@ -17,6 +16,10 @@
             <p class="tweet-text">{{ $tweet->text }}</p>
 
             <p class="tweet-text">コメントテキストコメントテキストコメントテキストコメントテキストコメントテキストコメントテキスト</p>
+            <textarea class="tweet-textarea"></textarea>
+            <div>
+                <button>送信</button>
+            </div>
         </div>
     </div>
 @endsection
