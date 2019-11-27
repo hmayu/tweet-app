@@ -77,7 +77,8 @@ li {
     border-radius:5px;
 }
 
-.container .tweets .tweet-name{
+.container .tweets .tweet-name,
+.tweet-head {
     font-size: 1.2em;
     background: #c4d1e4;
     text-align: left;
@@ -87,6 +88,9 @@ li {
     border-radius:5px 5px 0 0;
 }
 
+.head-btn{
+    text-align: center;
+}
 .container .tweet-text {
     padding: 15px;
     color: #8c8c8c;
@@ -94,6 +98,10 @@ li {
 
 .container .tweets p {
     margin: 0;
+}
+
+.tweet-head {
+    display: flex;
 }
 
 /* 新規投稿・会員登録ページの全体設定 */

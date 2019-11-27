@@ -2,8 +2,6 @@
 
 @section('content')
     <div class="container">
-        {{-- <div class="container-btn">
-        </div> --}}
         @foreach ($tweets as $tweet)
             <div class="tweets">
                 @if (Auth::check())

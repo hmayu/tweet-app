@@ -24,11 +24,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $tweets = Tweet::all();
-
-        return view('tweets.index',[
-            'tweets' => $tweets,
-        ]);
-        
+        //
     }
 }

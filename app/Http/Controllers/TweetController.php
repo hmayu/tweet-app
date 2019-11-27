@@ -34,4 +34,13 @@ class TweetController extends Controller
 
         return redirect()->route('tweets.index');
     }
+
+    public function show(int $id) {
+
+        $tweet = Tweet::find($id);
+
+        return view('tweets.show',[
+            'tweet' => $tweet,
+        ]);
+    }
 }
