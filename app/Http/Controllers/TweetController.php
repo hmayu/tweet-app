@@ -67,4 +67,10 @@ class TweetController extends Controller
         return redirect()->route('tweets.show', $id);
     }
 
+    public function destroy(int $id) {
+        Tweet::destroy($id);
+
+        return redirect()->route('tweets.index');
+    }
+
 }
