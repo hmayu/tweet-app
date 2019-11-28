@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Tweet;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
 
 class TweetController extends Controller
 {
@@ -51,6 +51,20 @@ class TweetController extends Controller
         return view('tweets.edit',[
             'tweet' => $tweet,
         ]);
+    }
+
+    public function update(int $id, Request $request) {
+        
+        $params = $request->validate([
+            'text' => 'required|max:2000',
+        ]);
+
+        $tweet = Tweet::find($id);
+        $tweet->fill(['text' => $params['text']]);
+
+        $tweet->save();
+
+        return redirect()->route('tweets.show', $id);
     }
 
 }
