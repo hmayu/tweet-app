@@ -13,6 +13,6 @@
 
 Auth::routes();
 Route::get('/', 'TweetController@index')->name('tweets.index');
-Route::resource('tweets', 'TweetController', ['only' => ['index', 'create', 'store','show']]);
+Route::resource('tweets', 'TweetController', ['only' => ['index', 'create', 'store','show','edit','update']]);
 Route::get('/home', 'TweetController@index')->name('home');
 
