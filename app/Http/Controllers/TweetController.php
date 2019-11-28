@@ -26,9 +26,9 @@ class TweetController extends Controller
     {
         $params = $request->validate([
             'text' => 'required|max:2000',
-            'user_id' => 'required',
         ]);
 
+        $params['user_id'] = Auth::id();
 
         Tweet::create($params);
 
