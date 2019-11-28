@@ -8,7 +8,7 @@
                 <div class="head-btn">
                     @if (Auth::id() == $tweet->user_id )
                     <button type="button" onclick="location.href = '{{ route('tweets.edit', $tweet->id) }}'">編集</button>
-                    <button>削除</button>
+                    <button type="button" onclick="location.href = '{{ route('tweets.destroy', $tweet->id) }}'">削除</button>
                     @endif
                 </div>
             </div>
