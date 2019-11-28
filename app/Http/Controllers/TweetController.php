@@ -68,7 +68,9 @@ class TweetController extends Controller
     }
 
     public function destroy(int $id) {
+        Tweet::destroy($id);
 
+        return redirect()->route('tweets.index');
     }
 
 }
