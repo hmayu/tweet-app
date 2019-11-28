@@ -3,7 +3,7 @@
 @section('content')
     <div class="create-post">
         <h1>新規投稿</h1>
-        <form method="POST" action="{{ route('tweets.store', ['user_id'=>'1']) }}">
+        <form method="POST" action="{{ route('tweets.store') }}">
             @csrf
             <textarea id="text" name="text" class="post-text"></textarea>
             <div class="btn">
